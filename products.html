@@ -53,20 +53,11 @@
                   <div class="row">
                      <div class="col-md-4">
                         <ul class="conta_icon">
-                           <li><a href="#"><img src="images/call.png" alt="#"/>Call us: 0126 - 922 - 0162</a> </li>
+                           <li><a href="#"><img src="images/call.png" alt="#"/>Call us: 0378 - 0610 - 97</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
-                        <ul class="social_icon">
-                           <li> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-                              </a>
-                           </li>
-                           <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-                           <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                           <li> <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
-                              </a>
-                           </li>
-                        </ul>
+
                      </div>
                      <div class="col-md-4">
                         <div class="se_fonr1">
@@ -81,11 +72,11 @@
                   <div class="row d_flex">
                      <div class="col-md-4">
                         <ul class="conta_icon d_none1">
-                           <li><a href="#"><img src="images/email.png" alt="#"/> demo@gmail.com</a> </li>
+                           <li><a href="#"><img src="images/email.png" alt="#"/> shy06101997@gmail.com</a> </li>
                         </ul>
                      </div>
                      <div class="col-md-4">
-                        <a class="logo" href="#"><img src="images/logo.png" alt="#"/></a>
+                        <a class="logo" href="#"></a>
                      </div>
                      <div class="col-md-4">
                         <ul class="right_icon d_none1">
@@ -202,40 +193,6 @@
          </div>
       </footer>
 
-      <div id="myModal" class="modal">
-         <div class="modal-content">
-            <span class="close" id="closeModalBtn">&times;</span>
-            <!-- Add the form here -->
-            <form id="request" class="main_form">
-               <div class="row">
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="ID" type="hidden" id="id">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Tên sản phẩm" type="text" id="nameProduct">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Giá sản phẩm" type="text" id="price">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Số lượng sản phẩm" type="text" id="quantity">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Ảnh của sản phẩm" type="file" id="image">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Mô tả sản phẩm" type="text" id="detail">
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                     <input class="contactus" placeholder="Mô tả sản phẩm" type="text" id="userID">
-                  </div>
-                  <div class="col-md-12">
-                     <button onclick="update()" type="submit"  class="send_btn">Update sản phẩm</button>
-                  </div>
-               </div>
-            </form>
-         </div>
-      </div>
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
@@ -279,7 +236,7 @@
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center" style="min-height: 125px">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">${item.nameProduct}</h5>
+                                  <a class="text-decoration-none" href="about.html"><h5>${item.nameProduct}</h5></a>
                                     <!-- Product price-->
                                     <span class="text-decoration">${item.price} VNĐ</span>
                                     <br>
@@ -289,6 +246,7 @@
 
                                  <button onclick="showFromEdit(${item.id})" class="btn btn-primary me-1"><i class="fa-sharp fa-solid fa-pen"></i></button>
                                   <button onclick="deleteProduct(${item.id})" class="btn btn-primary me-1"><i class="fa-solid fa-trash"></i></button>
+                                  <button onclick="" class="btn btn-primary me-1"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
                                 </div>
                            </div>
                         </div>
@@ -306,6 +264,7 @@
          price: document.getElementById('price').value,
          quantity: document.getElementById('quantity').value,
          detail: document.getElementById('detail').value,
+         image: document.getElementById('image').value,
          userID: document.getElementById('userID').value,
       }
 
@@ -319,28 +278,28 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-15 offset-md-1">
-                     <form id="request"  class="main_form" enctype="multipart/form-data">
+                     <form id="request"  class="main_form" >
                         <div class="row">
-                           <div class="col-md-6 col-sm-6">
+                           <div class=".col-sm-8 .col-sm-pull-4">
                               <input class="contactus" placeholder="ID" type="text" id="id" name="id">
                            </div>
-                           <div class="col-md-6 col-sm-6">
+                           <div class=".col-sm-8 .col-sm-pull-4">
                               <input class="contactus" placeholder="Tên sản phẩm" type="text" id="nameProduct" name="nameProduct">
                            </div>
-                           <div class="col-md-6 col-sm-6">
+                           <div class=".col-sm-8 .col-sm-pull-4">
                               <input class="contactus" placeholder="Giá sản phẩm" type="text" id="price" name="price">
                            </div>
-                           <div class="col-md-6 col-sm-6">
+                           <div class=".col-sm-8 .col-sm-pull-4">
                               <input class="contactus" placeholder="Số lượng sản phẩm " type="text" id="quantity" name="quantity">
                            </div>
-                           <div class="col-md-6 col-sm-6">
-                              <input class="contactus" placeholder="Ảnh của sản phẩm" type="file" id="image" name="image">
+                           <div class=".col-sm-8 .col-sm-pull-4">
+                              <input class="contactus" placeholder="Ảnh của sản phẩm" type="text" id="image" name="image">
                            </div>
-                           <div class="col-md-6 col-sm-6">
+                           <div class=".col-sm-8 .col-sm-pull-4">
                               <input class="contactus" placeholder="Mô tả sản phẩm" type="text" id="detail" name="detail">
                            </div>
-                           <div class="col-md-6 col-sm-6">
-                              <input class="contactus" placeholder="Mô tả sản phẩm" type="hidden" id="userID" name="userID">
+                           <div class=".col-sm-8 .col-sm-pull-4">
+                              <input class="contactus" placeholder="userID" type="hidden" id="userID" name="userID">
                            </div>
                            <div class="col-md-12">
                               <button type="submit" onclick="save()" class="send_btn">Thêm sản phẩm</button>
@@ -362,17 +321,53 @@
       })
    }
 
+
+
    function showFromEdit(id) {
       axios.get(API_URL + `/${id}`).then(res => {
          let data = res.data[0];
-         // const openModalBtn = document.getElementById('openModalBtn');
-         const closeModalBtn = document.getElementById('closeModalBtn');
-         const modal = document.getElementById('myModal');
 
-         modal.style.display = 'block';
-         closeModalBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-         })
+         let str = `<div id="contact" class="contact">
+   <div class="con_bg">
+      <div class="container">
+         <div class="row justify-content-center align-items-center">
+            <div class="col-md-15 offset-md-1">
+               <form id="request" class="main_form">
+                  <div class="row">
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="ID" type="hidden" id="id">
+                     </div>
+
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="Tên sản phẩm" type="text" id="nameProduct">
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="Giá sản phẩm" type="text" id="price">
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="Số lượng sản phẩm" type="text" id="quantity">
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="Ảnh của sản phẩm" type="text" id="image">
+                     </div>
+                     <div class="col-md-6 col-sm-6">
+                        <input class="contactus" placeholder="Mô tả sản phẩm" type="text" id="detail">
+                     </div>
+<!--                     <div class="col-md-6 col-sm-6">-->
+<!--                        <input class="contactus" placeholder="Mô tả sản phẩm" type="text" id="userID">-->
+<!--                     </div>-->
+                     <div class="col-md-12">
+                        <button onclick="update()" type="submit"  class="send_btn">Update sản phẩm</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>`
+
+         document.getElementById('display').innerHTML = str;
 
 
          document.getElementById('id').value = data.id;
@@ -381,11 +376,11 @@
          document.getElementById("quantity").value = data.quantity;
          document.getElementById("image").value = data.image;
          document.getElementById("detail").value = data.detail;
-         document.getElementById("userID").value = data.userID;
-
-
-      })
+         // document.getElementById("userID").value = data.userID;
+         })
    }
+
+
 
    function update() {
       let data = {
@@ -395,9 +390,10 @@
          quantity: document.getElementById('quantity').value,
          image: document.getElementById('image').value,
          detail: document.getElementById('detail').value,
-         userID: document.getElementById('userID').value,
+         // userID: document.getElementById('userID').value,
 
       }
+
 
 
       axios.put(`${API_URL}/${data.id}`, data).then((res) => {
